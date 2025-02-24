@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ViewDelta is a model that detects changes between two unaligned images with a text prompt.">
+  <meta name="keywords" content="ViewDelta, Change Detection, CSeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ViewDelta: Text-Prompted Change Detection in Unaligned Images</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ViewDelta: Text-Prompted Change Detection in Unaligned Images</h1>
+          <div class="is-size-5 publication-authors">
+            <!-- TODO: Update links-->
+            <span class="author-block">
+              <a href="https://keunhong.com">Subin Varghese</a>,</span>
+            <span class="author-block">
+              <a href="https://joshgao.com">Joshua Gao</a>,</span>
+            <span class="author-block">
+              <a href="https://jonbarron.info">Vedhus Hoskere</a>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of Houston</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2412.07612v1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- TODO: Add video link -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+							<!-- TODO: Add github -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+							<!-- TODO: Add CSeg link-->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+			<!-- TODO: Update this to new ViewDelta preview -->
+			<img src="./static/images/preview.png" />
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">ViewDelta</span> detects changes between two unaligned images with a text prompt.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Detecting changes between images is a fundamental problem in computer vision with broad applications in situational awareness, infrastructure assessment, environment monitoring, and industrial automation. Existing supervised models are typically limited to detecting specific types of changes, necessitating retraining for new tasks. To address these limitations with a single approach, we propose a novel change detection method that is the first to utilize unaligned images and textual prompts to output a binary segmentation of changes relevant to user-provided text. Our architecture not only enables flexible detection across diverse change detection use cases, but also yields state-of-the art performance on established benchmarks. Additionally, we release an accompanying dataset comprising of 100,311 pairs of images with text prompts and the corresponding change detection labels. We demonstrate the effectiveness of our method both quantitatively and qualitatively on datasets with a wide variety of viewpoints in indoor, outdoor, street level, synthetic, and satellite images.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container content">
+      <div id="results-carousel" class="carousel results-carousel">
+				<!-- TODO: Add different types of images and prompts: all, satellite, good text prompts etc -->
+				<img src="./static/images/cd_examples/example1.jpeg" style="width: 100%;" />
+				<img src="./static/images/cd_examples/example2.jpeg" style="width: 100%" />
+				<img src="./static/images/cd_examples/example3.jpeg" style="width: 100%" />
+				<img src="./static/images/cd_examples/example4.jpeg" style="width: 100%" />
+				<img src="./static/images/cd_examples/example5.jpeg" style="width: 100%" />
+				<img src="./static/images/cd_examples/example6.jpeg" style="width: 100%" />
+				<img src="./static/images/cd_examples/example7.jpeg" style="width: 100%" />
+				<img src="./static/images/cd_examples/example8.jpeg" style="width: 100%" />
+				<img src="./static/images/cd_examples/example9.jpeg" style="width: 100%" />
+				<img src="./static/images/cd_examples/example10.jpeg" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Evaluation</h2>
+		<!-- TODO: Maybe replace this image with a graph -->
+		<img src="./static/images/quantitative.png" />
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{varghese2024viewdelta,
+	title={ViewDelta: Text-Prompted Change Detection in Unaligned Images},
+	author={Varghese, Subin and Gao, Joshua and Hoskere, Vedhus},
+	journal={arXiv preprint arXiv:2412.07612},
+	year={2024}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+						We thank the authors of <a
+						href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> that kindly open sourced the template of this website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
