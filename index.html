@@ -34,6 +34,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">ViewDelta: Text-Prompted Change Detection in Unaligned Images</h1>
+          <p>Links below disabled for Anonymous ICCV submission.</p>
           <!-- <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=qTPGNM0AAAAJ&hl=en&oi=ao" target="_blank">Subin Varghese</a>,</span>
@@ -52,7 +53,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2412.07612v1" target="_blank"
+                <a style="pointer-events: none" href="https://arxiv.org/abs/2412.07612v1" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -63,7 +64,7 @@
               <!-- Video Link. -->
               <!-- TODO: Add video link -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA" target="_blank"
+                <a style="pointer-events: none" href="https://www.youtube.com/watch?v=MrKrnHhk8IA" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -74,7 +75,7 @@
               <!-- Code Link. -->
 							<!-- TODO: Add github -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies" target="_blank"
+                <a style="pointer-events: none" href="https://github.com/drags99/ViewDelta.git" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -85,7 +86,7 @@
               <!-- Dataset Link. -->
 							<!-- TODO: Add CSeg link-->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1" target="_blank"
+                <a style="pointer-events: none" href="https://github.com/google/nerfies/releases/tag/0.1" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -121,7 +122,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Detecting changes between images is a fundamental problem in computer vision with broad applications in situational awareness, infrastructure assessment, environment monitoring, and industrial automation. Existing supervised models are typically limited to detecting specific types of changes, necessitating retraining for new tasks. To address these limitations with a single approach, we propose a novel change detection method that is the first to utilize unaligned images and textual prompts to output a binary segmentation of changes relevant to user-provided text. Our architecture not only enables flexible detection across diverse change detection use cases, but also yields state-of-the art performance on established benchmarks. Additionally, we release an accompanying dataset comprising of 100,311 pairs of images with text prompts and the corresponding change detection labels. We demonstrate the effectiveness of our method both quantitatively and qualitatively on datasets with a wide variety of viewpoints in indoor, outdoor, street level, synthetic, and satellite images.
+            Detecting changes between images is fundamental in applications such as infrastructure assessment, environmental monitoring, and industrial automation. Existing supervised models demonstrate strong performance but are inherently limited by the scope of their training data, requiring retraining to recognize novel changes. To overcome this limitation, we introduce a novel change detection task utilizing textual prompts alongside two potentially unaligned images to produce binary segmentations highlighting user-relevant changes. This text-conditioned framework significantly broadens the scope of change detection, enabling unparalleled flexibility and straightforward scalability by incorporating diverse future datasets without restriction to specific change types. As a first approach to address this challenge, we propose ViewDelta, a multimodal architecture extending the vision transformer into the domain of text-conditioned change detection. ViewDelta establishes a robust baseline, demonstrating flexibility across various scenarios and achieving competitive results compared to specialized, fine-tuned models trained on aligned images. Moreover, we create and release the first text-prompt-conditioned change detection dataset, comprising 501,153 image pairs with corresponding textual prompts and annotated labels. Extensive experiments confirm the robustness and versatility of our model across diverse environments, including indoor, outdoor, street-level, synthetic, and satellite imagery.
           </p>
         </div>
       </div>
@@ -129,21 +130,38 @@
     <!--/ Abstract. -->
 </section>
 
+<div class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-centered has-text-centered">ViewDelta Inference Examples</h2>
+    <p class="has-text-centered">Predictions are in <span style="color: red">red</span>, and ground truths are in <span style="color: rgb(0, 206, 206)">blue</span>.</p>
+  </div>
+</div>
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container content">
       <div id="results-carousel" class="carousel results-carousel">
 				<!-- TODO: Add different types of images and prompts: all, satellite, good text prompts etc -->
-				<img src="./static/images/cd_examples/example1.jpeg" style="width: 100%;" />
-				<img src="./static/images/cd_examples/example2.jpeg" style="width: 100%" />
-				<img src="./static/images/cd_examples/example3.jpeg" style="width: 100%" />
-				<img src="./static/images/cd_examples/example4.jpeg" style="width: 100%" />
-				<img src="./static/images/cd_examples/example5.jpeg" style="width: 100%" />
-				<img src="./static/images/cd_examples/example6.jpeg" style="width: 100%" />
-				<img src="./static/images/cd_examples/example7.jpeg" style="width: 100%" />
-				<img src="./static/images/cd_examples/example8.jpeg" style="width: 100%" />
-				<img src="./static/images/cd_examples/example9.jpeg" style="width: 100%" />
-				<img src="./static/images/cd_examples/example10.jpeg" style="width: 100%" />
+				<img src="./static/images/cd_examples/cseg_Picture1.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/cseg_Picture2.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/cseg_Picture3.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/cseg_Picture4.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/cseg_Picture5.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/cseg_Picture6.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/cseg_Picture7.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/cseg_Picture8.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/cseg_Picture9.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/cseg_Picture10.png" style="width: 100%" />
+        <img src="./static/images/cd_examples/pscd_Picture1.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/pscd_Picture2.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/pscd_Picture3.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/pscd_Picture4.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/pscd_Picture5.png" style="width: 100%" />
+        <img src="./static/images/cd_examples/sysucd_Picture1.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/sysucd_Picture2.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/sysucd_Picture3.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/sysucd_Picture4.png" style="width: 100%" />
+				<img src="./static/images/cd_examples/sysucd_Picture5.png" style="width: 100%" />
+
       </div>
     </div>
   </div>
@@ -151,9 +169,13 @@
 
 <section class="section">
   <div class="container is-max-desktop content">
-    <h2 class="title">Evaluation</h2>
-		<!-- TODO: Maybe replace this image with a graph -->
-		<img src="./static/images/quantitative.png" />
+    <h2 class="title">Quantitative Results</h2>
+    <p>* ViewDelta is a generalized model, not tailored to these specific datasets. Its performance is evaluated against fine-tuned models designed for each individual dataset.</p>
+    <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+      <img src="./static/images/pscdResults.png" style="display: flex; flex: 1; max-width: 30%;" />
+      <img src="./static/images/csegResults.png" style="display: flex; flex: 1; max-width: 10%;" />
+    </div>
+    <img src="./static/images/sysucdResults.png" />
   </div>
 </section>
 
@@ -161,11 +183,17 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
+        <pre><code>@article{varghese2024viewdelta,
+	title={ViewDelta: Text-Prompted Change Detection in Unaligned Images},
+	author={Anonymous ICCV Submission},
+	journal={Anonymous ICCV Submission},
+	year={2025}
+}</code></pre>
     <!-- <pre><code>@article{varghese2024viewdelta,
 	title={ViewDelta: Text-Prompted Change Detection in Unaligned Images},
 	author={Varghese, Subin and Gao, Joshua and Hoskere, Vedhus},
 	journal={arXiv preprint arXiv:2412.07612},
-	year={2024}
+	year={2025}
 }</code></pre> -->
   </div>
 </section>
@@ -175,7 +203,8 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link" target="_blank"
-         href="./static/videos/nerfies_paper.pdf">
+         href="https://arxiv.org/abs/2011.12948"
+         class="external-link">
         <i class="fas fa-file-pdf"></i>
       </a>
       <a class="icon-link" href="https://github.com/keunhong" target="_blank" class="external-link">
