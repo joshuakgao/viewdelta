@@ -104,7 +104,7 @@
                   <span>Data</span>
                   </a>
             </div>
-            <p><span style="color: red">To the ICCV reviewers</span>: In our paper submission, we miscaptioned Table 2 as SYSU-CD instead of PSCD. We apologize for the possible confusion.</p>
+            <p><span style="color: red">To the ICCV reviewers</span>: In our paper submission, we miscaptioned Table 2 as SYSU-CD instead of PSCD. We apologize for the confusion.</p>
           </div>
         </div>
       </div>
@@ -118,9 +118,6 @@
       <video controls poster="./static/images/preview.png" style="background-color: white; padding: 16px; border: 1px solid lightgray;">
         <source src="./static/videos/preview.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">ViewDelta</span> detects changes between two unaligned images with a text prompt.
-      </h2>
     </div>
   </div>
 </section>
@@ -142,9 +139,13 @@
 </section>
 
 <div class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-centered has-text-centered">ViewDelta Inference Examples</h2>
-    <p class="has-text-centered">Predictions are in <span style="color: red">red</span>, and ground truths are in <span style="color: rgb(0, 206, 206)">blue</span>.</p>
+  <div class="container is-max-desktop content" style="margin-bottom: 32px;">
+    <h2 class="title is-2">ViewDelta</h2>
+      <p><span class="dnerf">ViewDelta</span> is used to detect changes between two images conditioned on a text prompt. This generalized model can be use for applications spanning situational awareness, infrastructure damage assessment, and environmental monitoring.</p>
+  </div>
+  <div class="container is-max-desktop content">
+    <h4 class="title">Inference Examples</h4>
+    <p>These examples are inferences run on the test sets of CSeg, SYSU-CD, and PSCD datasets. Predictions are in <span style="color: red">red</span>, and ground truths are in <span style="color: rgb(0, 206, 206)">blue</span>.</p>
   </div>
 </div>
 <section class="hero is-light is-small">
@@ -179,7 +180,7 @@
 
 <section class="section">
   <div class="container is-max-desktop content">
-    <h2 class="title">Quantitative Results</h2>
+    <h4 class="title">Quantitative Results</h4>
     <p>* ViewDelta is a generalized model, not tailored to these specific datasets. Its performance is evaluated against fine-tuned models designed for each individual dataset.</p>
     <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
       <img src="./static/images/pscdResults.png" style="display: flex; flex: 1; max-width: 30%;" />
@@ -191,14 +192,11 @@
 
 <section class="section">
   <div class="container is-max-desktop content">
-    <h2 class="title">CSeg Datatset</h2>
-    <p>We propose a procedure that leverages state of the art vision models to generate the Change Segmentation (CSeg) dataset: a large-scale, varying-view, and text-guided change detection dataset.</p>
+    <h2 class="title is-2">CSeg Datatset</h2>
+    <p>The CSeg dataset is a large-scale, varying-view, and text-guided change detection dataset used to train ViewDelta. This dataset includes 501,153 change image pairs with 374,169 unique prompts.</p>
   </div>
-</section>
-
-<div class="section">
   <div class="container is-max-desktop content">
-    <h2 class="title">CSeg Example Images</h2>
+    <h4 class="title">Example Dataset Images</h4>
   </div>
 </div>
 <section class="hero is-light is-small">
@@ -206,12 +204,11 @@
     <div class="container content">
       <div id="results-carousel" class="carousel results-carousel">
 				<!-- TODO: Add different types of images and prompts: all, satellite, good text prompts etc -->
+				<img src="./static/images/cseg_examples/cseg_14.png" style="width: 100%" />
 				<img src="./static/images/cseg_examples/cseg_9.png" style="width: 100%" />
 				<img src="./static/images/cseg_examples/cseg_13.png" style="width: 100%" />
-				<img src="./static/images/cseg_examples/cseg_14.png" style="width: 100%" />
 				<img src="./static/images/cseg_examples/cseg_4.png" style="width: 100%" />
 				<img src="./static/images/cseg_examples/cseg_2.png" style="width: 100%" />
-				<img src="./static/images/cseg_examples/cseg_1.png" style="width: 100%" />
 				<img src="./static/images/cseg_examples/cseg_3.png" style="width: 100%" />
 				<img src="./static/images/cseg_examples/cseg_5.png" style="width: 100%" />
 				<img src="./static/images/cseg_examples/cseg_6.png" style="width: 100%" />
