@@ -82,17 +82,6 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <!-- TODO: Add video link -->
-              <span class="link-block">
-                <a style="pointer-events: none" href="https://www.youtube.com/watch?v=MrKrnHhk8IA" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
               <!-- Code Link. -->
 							<!-- TODO: Add github -->
               <span class="link-block">
@@ -126,8 +115,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-			<!-- TODO: Update this to new ViewDelta preview -->
-			<img src="./static/images/preview.png" />
+      <video controls poster="./static/images/preview.png" style="background-color: white; padding: 16px; border: 1px solid lightgray;">
+        <source src="./static/videos/preview.mp4" type="video/mp4">
+      </video>
       <h2 class="subtitle has-text-centered">
         <span class="dnerf">ViewDelta</span> detects changes between two unaligned images with a text prompt.
       </h2>
