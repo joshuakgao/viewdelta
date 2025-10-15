@@ -23,7 +23,7 @@
         content="ViewDelta is a model that detects changes between two unaligned images with a text prompt.">
   <meta name="keywords" content="ViewDelta, Change Detection, CSeg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ViewDelta: Text-Prompted Change Detection in Unaligned Images</title>
+  <title>ViewDelta</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -54,27 +54,26 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">ViewDelta: Text-Prompted Change Detection in Unaligned Images</h1>
-          <p>Links below disabled for Anonymous ICCV submission.</p>
-          <!-- <div class="is-size-5 publication-authors">
+          <h1 class="title is-1 publication-title">ViewDelta: Scaling Scene Change Detection through Text-Conditioning</h1>
+          <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=qTPGNM0AAAAJ&hl=en&oi=ao" target="_blank">Subin Varghese</a>,</span>
             <span class="author-block">
               <a href="https://joshgao.com" target="_blank">Joshua Gao</a>,</span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?hl=en&user=f9M0CiIAAAAJ" target="_blank">Vedhus Hoskere</a>,
+              <a href="https://scholar.google.com/citations?hl=en&user=f9M0CiIAAAAJ" target="_blank">Vedhus Hoskere</a>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">University of Houston</span>
-          </div> -->
+          </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a style="pointer-events: none" href="https://arxiv.org/abs/2412.07612v1" target="_blank"
+                <a href="https://arxiv.org/abs/2412.07612" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -83,28 +82,27 @@
                 </a>
               </span>
               <!-- Code Link. -->
-							<!-- TODO: Add github -->
-              <span class="link-block">
-                <a style="pointer-events: none" href="https://github.com/drags99/ViewDelta.git" target="_blank"
+              <!-- TODO: Add repo for ViewDelta inference here -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/drags99/ViewDelta.git" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
-                  </a>
-              </span>
+                </a>
+              </span> -->
               <!-- Dataset Link. -->
-							<!-- TODO: Add CSeg link-->
               <span class="link-block">
-                <a style="pointer-events: none" href="https://github.com/google/nerfies/releases/tag/0.1" target="_blank"
+                <a href="https://huggingface.co/datasets/hoskerelab/CSeg" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+                        alt="Hugging Face"
+                        style="width: 1em; height: 1em; vertical-align: middle;">                  </span>
                   <span>Data</span>
-                  </a>
+                </a>
             </div>
-            <p><b>Errata:</b> In an earlier online draft of our paper, Table 2 was incorrectly labeled as "SYSU-CD." The correct label is "PSCD."</p>
           </div>
         </div>
       </div>
@@ -183,7 +181,7 @@
     <h4 class="title">Quantitative Results</h4>
     <p>* ViewDelta is a generalized model, not tailored to these specific datasets. Its performance is evaluated against fine-tuned models designed for each individual dataset.</p>
     <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
-      <img src="./static/images/pscdResults.png" style="display: flex; flex: 1; max-width: 35%;" />
+      <img src="./static/images/pscdResults.png" style="display: flex; flex: 1; max-width: 45%;" />
       <img src="./static/images/csegResults.png" style="display: flex; flex: 1; max-width: 25%; margin-bottom: 10px;" />
     </div>
     <img src="./static/images/sysucdResults.png" />
@@ -225,18 +223,15 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-        <pre><code>@article{varghese2024viewdelta,
-	title={ViewDelta: Text-Prompted Change Detection in Unaligned Images},
-	author={Anonymous ICCV Submission},
-	journal={Anonymous ICCV Submission},
-	year={2025}
+        <pre><code>@misc{varghese2025viewdeltascalingscenechange,
+      title={ViewDelta: Scaling Scene Change Detection through Text-Conditioning}, 
+      author={Subin Varghese and Joshua Gao and Vedhus Hoskere},
+      year={2025},
+      eprint={2412.07612},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2412.07612}, 
 }</code></pre>
-    <!-- <pre><code>@article{varghese2024viewdelta,
-	title={ViewDelta: Text-Prompted Change Detection in Unaligned Images},
-	author={Varghese, Subin and Gao, Joshua and Hoskere, Vedhus},
-	journal={arXiv preprint arXiv:2412.07612},
-	year={2025}
-}</code></pre> -->
   </div>
 </section>
 
